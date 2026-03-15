@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaze-metabolomics"
+version = "0.1.0"
+description = "GAZE: Graph Attention Zone Estimation for metabolite level prediction from gene expression"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "torch-geometric>=2.4",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["gaze*"]

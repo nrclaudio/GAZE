@@ -1,0 +1,120 @@
+{
+  "seed": 42,
+  "config_name": "deploy_relational_full_detgate",
+  "model": {
+    "variant": "enhanced",
+    "hidden_dim": 128,
+    "num_layers": 3,
+    "dropout": 0.2,
+    "use_directionality": true,
+    "directional_concat": false,
+    "use_flux_messages": false,
+    "flux_message_depth": 1,
+    "use_mass_balance_projection": false,
+    "subtract_sample_mean": false,
+    "enhanced_config": {
+      "features": {
+        "cross_modal_attention": true,
+        "residual_connections": true,
+        "layer_normalization": true,
+        "similarity_regularization": false,
+        "flux_messages": true,
+        "mass_balance_projection": true,
+        "metabolite_conditioned_reader": true,
+        "contrastive_pretraining": false,
+        "graph_positional_encodings": false,
+        "gene_skip": false,
+        "gene_film": false,
+        "detection_gate": false
+      },
+      "attention": {
+        "cross_modal_heads": 4,
+        "cross_modal_dropout": 0.2,
+        "cross_modal_temperature": 1.0,
+        "cross_modal_residual_weight": 0.5
+      },
+      "architecture": {
+        "residual_learning_rate": 0.1,
+        "layer_type": "Relational"
+      },
+      "regularization": {
+        "similarity_weight": 0.1,
+        "similarity_temperature": 0.1,
+        "similarity_top_k": 5,
+        "structural_loss_weight": 1.0
+      },
+      "physics": {
+        "flux_message_depth": 1
+      },
+      "mcr": {
+        "hidden_dim": 128,
+        "mlp_hidden": 128,
+        "two_hop": false,
+        "normalize_descriptors": true,
+        "max_neighbors": 10,
+        "shuffle_descriptors": false,
+        "max_hops": 1,
+        "hop_decay_init": -0.5
+      },
+      "gpe": {
+        "enabled": false,
+        "rwse_steps": 16
+      },
+      "contrastive": {
+        "enabled": false,
+        "temperature": 0.07,
+        "projection_dim": 128,
+        "cross_modal_weight": 1.0,
+        "within_modal_weight": 0.5,
+        "symmetric_loss": true,
+        "min_batch_size": 16,
+        "gene_dropout_rate": 0.1,
+        "embedding_dropout_rate": 0.1,
+        "smiles_dropout_rate": 0.05,
+        "enhanced_dropout_rate": 0.15
+      }
+    }
+  },
+  "data": {
+    "normalized": false,
+    "use_gene_features": false,
+    "mudata_path": null,
+    "graph_path": null,
+    "gene_mapping_path": null,
+    "batch_size": 4,
+    "num_workers": 0,
+    "pin_memory": false,
+    "gradient_accumulation_steps": 4,
+    "train_fraction": 1.0,
+    "val_fraction": 0.0,
+    "random_graph": false,
+    "graph_identifier": "",
+    "randomize_smiles": false,
+    "randomize_genes": false,
+    "randomize_embeddings": false,
+    "randomize_gpe": false
+  },
+  "training": {
+    "learning_rate": 0.001,
+    "max_epochs": 120,
+    "patience": 121,
+    "save_dir": "/data1/cnovellarausell/concat-smiles-model/deployed_models/relational_full",
+    "enable_metabolite_dropout": false,
+    "mask_target_smiles": 0.5
+  },
+  "physics": {
+    "lambda_balance": 0.5,
+    "lambda_correlation": 0.1,
+    "lambda_variance": 1.0,
+    "lambda_kl": 0.0,
+    "use_listwise_ranking": false,
+    "enzyme_confidence": 3.0,
+    "flux_flexibility": 0.8
+  },
+  "contrastive": {
+    "enabled": false,
+    "weight": 0.1,
+    "temperature": 0.07,
+    "pretrained_encoders_path": null
+  }
+}
