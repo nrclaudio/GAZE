@@ -62,15 +62,6 @@ GAZE combines five components in a unified forward pass:
 
 5. **Mass balance projection** -- a Cholesky-based projector enforces stoichiometric constraints on predicted fluxes during training.
 
-## Performance
-
-| Evaluation | Metric | Value |
-|---|---|---|
-| 5-fold cross-validation (CAMP) | R^2 | 0.816 |
-| Leave-one-metabolite-out (50 metabolites) | Median R^2 | -0.34 |
-| LOMO: fraction with positive R^2 | % | 30% |
-| External validation (ccRCC tissue, 220 samples) | Median Spearman rho | 0.330 |
-
 ## Citation
 
 If you use GAZE in your research, please cite:
@@ -84,6 +75,3 @@ If you use GAZE in your research, please cite:
 }
 ```
 
-## License
-
-MIT
