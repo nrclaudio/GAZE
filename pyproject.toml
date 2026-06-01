@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "gaze-metabolomics"
 version = "0.1.0"
-description = "GAZE: Graph Attention Zone Estimation for metabolite level prediction from gene expression"
+description = "GAZE: Graph Attention for Zero-shot metabolite Estimation, predicting metabolite concentrations from gene expression"
 requires-python = ">=3.10"
 dependencies = [
     "torch>=2.0",

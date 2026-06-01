@@ -1,4 +1,4 @@
-"""GAZE: Graph Attention Zone Estimation for metabolite level prediction."""
+"""GAZE: Graph Attention for Zero-shot metabolite Estimation."""
 
 from .model import GAZEModel
 from .config import GAZEConfig
