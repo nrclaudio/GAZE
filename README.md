@@ -12,7 +12,7 @@ Use Python 3.12 and the pinned environment from the [reproducibility release](ht
 pip install .
 ```
 
-Download the reproducibility release artifacts as explained in its [tutorial](https://github.com/nrclaudio/gaze-reproducibility/blob/v2026.11.02.1/reproducibility/TUTORIAL.md). Run the example from this repository:
+Download the reproducibility release artifacts as explained in its [tutorial](https://github.com/nrclaudio/gaze-reproducibility/blob/main/reproducibility/TUTORIAL.md). Run the example from this repository:
 
 ```bash
 python examples/replay_release.py --release ../gaze-reproducibility/reproducibility
