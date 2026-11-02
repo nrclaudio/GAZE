@@ -3,5 +3,7 @@
 from .model import GAZEModel
 from .config import GAZEConfig
 
-__version__ = "0.1.0"
-__all__ = ["GAZEModel", "GAZEConfig"]
+from .predictor import GAZEPredictor
+
+__version__ = "0.2.0"
+__all__ = ["GAZEModel", "GAZEConfig", "GAZEPredictor"]

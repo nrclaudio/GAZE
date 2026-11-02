@@ -4,13 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gaze-metabolomics"
-version = "0.1.0"
-description = "GAZE: Graph Attention for Zero-shot metabolite Estimation, predicting metabolite concentrations from gene expression"
+version = "0.2.0"
+description = "GAZE: Graph Attention for Zero-shot metabolite Estimation, predicting relative metabolite abundances from gene expression"
 requires-python = ">=3.10"
 dependencies = [
     "torch>=2.0",
     "torch-geometric>=2.4",
     "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.11",
+    "scikit-learn>=1.3",
+    "mudata>=0.3",
+    "anndata>=0.10",
+    "h5py>=3.10",
+    "networkx>=3.0",
+    "tqdm>=4.62",
 ]
 
 [project.optional-dependencies]
@@ -18,3 +26,6 @@ dev = ["pytest>=7.0"]
 
 [tool.setuptools.packages.find]
 include = ["gaze*"]
+
+[tool.setuptools.package-data]
+"gaze._reference" = ["provenance.json"]
