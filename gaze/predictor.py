@@ -11,7 +11,7 @@ from ._reference.data.dataset_smiles import FiLMDatasetWithSMILES
 class GAZEPredictor:
     """Frozen released model. RNA inputs must already be on the training-compatible scale.
 
-    Use ``from_release`` with the downloaded reproducibility ``revision`` directory.
+    Use ``from_release`` with the downloaded reproducibility ``reproducibility`` directory.
     The bundled 867-sample deployment weights are separate from the cohort-excluding
     checkpoints used here.
     """

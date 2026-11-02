@@ -5,5 +5,5 @@ from .config import GAZEConfig
 
 from .predictor import GAZEPredictor
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __all__ = ["GAZEModel", "GAZEConfig", "GAZEPredictor"]

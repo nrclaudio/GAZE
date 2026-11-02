@@ -6,16 +6,16 @@ GAZE is a biochemically regularized graph neural network for predicting relative
 
 ## Installation and tested inference
 
-Use Python 3.12 and the pinned environment from the [reproducibility release](https://github.com/nrclaudio/gaze-reproducibility/releases/tag/v2026.11.02), then install this package:
+Use Python 3.12 and the pinned environment from the [reproducibility release](https://github.com/nrclaudio/gaze-reproducibility/releases/tag/v2026.11.02.1), then install this package:
 
 ```bash
 pip install .
 ```
 
-Download the reproducibility release artifacts as explained in its [tutorial](https://github.com/nrclaudio/gaze-reproducibility/blob/v2026.11.02/revision/TUTORIAL.md). Run the example from this repository:
+Download the reproducibility release artifacts as explained in its [tutorial](https://github.com/nrclaudio/gaze-reproducibility/blob/v2026.11.02.1/reproducibility/TUTORIAL.md). Run the example from this repository:
 
 ```bash
-python examples/replay_release.py --release ../gaze-reproducibility/revision
+python examples/replay_release.py --release ../gaze-reproducibility/reproducibility
 ```
 
 The example strictly loads the released 615-sample CAMP model, predicts RNA-only inputs for two excluded-cohort samples, and compares them with saved predictions. The graph, gene mapping, RNA schema, training configuration and weights are checked against the release manifest. No labels or parameter updates are used during inference.
@@ -23,7 +23,7 @@ The example strictly loads the released 615-sample CAMP model, predicts RNA-only
 ```python
 from gaze import GAZEPredictor
 
-predictor = GAZEPredictor.from_release("../gaze-reproducibility/revision")
+predictor = GAZEPredictor.from_release("../gaze-reproducibility/reproducibility")
 predictions = predictor.predict_rna(rna_dataframe)
 ```
 
