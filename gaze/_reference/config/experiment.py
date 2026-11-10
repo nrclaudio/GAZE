@@ -227,6 +227,7 @@ class TrainingConfig:
     save_dir: Optional[str] = None
     enable_metabolite_dropout: bool = False
     mask_target_smiles: bool = False
+    validation_objective: str = 'configured_loss'
 
     @classmethod
     def from_dict(cls, raw: Optional[Dict[str, Any]]) -> "TrainingConfig":
@@ -249,6 +250,7 @@ class TrainingConfig:
             "save_dir": self.save_dir,
             "enable_metabolite_dropout": self.enable_metabolite_dropout,
             "mask_target_smiles": self.mask_target_smiles,
+            "validation_objective": self.validation_objective,
         }
 
 

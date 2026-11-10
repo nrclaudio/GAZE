@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gaze-metabolomics"
-version = "0.2.1"
+version = "0.2.2"
 description = "GAZE: Graph Attention for Zero-shot metabolite Estimation, predicting relative metabolite abundances from gene expression"
 requires-python = ">=3.10"
 dependencies = [
